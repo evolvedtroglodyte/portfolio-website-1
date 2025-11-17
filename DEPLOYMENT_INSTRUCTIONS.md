@@ -26,7 +26,7 @@ Before deploying, you **MUST** add your Anthropic API key to Netlify:
 4. Click **Add a variable**
 5. Add:
    - **Key**: `ANTHROPIC_API_KEY`
-   - **Value**: `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`
+   - **Value**: `[Your Anthropic API key from the Netlify environment variables you already set up]`
 6. Click **Save**
 
 ---
