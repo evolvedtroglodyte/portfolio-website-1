@@ -1,0 +1,98 @@
+# Video Folder Instructions
+
+## Required Video
+
+Add your 30-second introduction video to this folder:
+
+**Filename:** about-me.mp4
+
+## Video Specifications
+
+- **Duration:** 30 seconds (exactly or close to it)
+- **Format:** MP4 (H.264 codec recommended)
+- **Resolution:** 1920x1080 (Full HD) or 1280x720 (HD)
+- **File Size:** Under 50MB for best loading performance
+- **Orientation:** Landscape (horizontal)
+
+## Video Content Suggestions
+
+Your video should answer "Tell me about yourself" and include:
+
+1. **Introduction** (5 seconds)
+   - Your name
+   - Your current role or status
+
+2. **Professional Focus** (10 seconds)
+   - What you're passionate about
+   - Your area of expertise
+   - Current goals
+
+3. **Personal Touch** (10 seconds)
+   - Hobbies or interests
+   - What makes you unique
+   - Your personality
+
+4. **Closing** (5 seconds)
+   - Call to action (e.g., "Let's connect!")
+   - Enthusiasm about opportunities
+
+## Recording Tips
+
+### Equipment
+- **Camera:** Smartphone camera (4K or 1080p) is perfect
+- **Microphone:** Built-in is fine, but external mic is better
+- **Lighting:** Natural light or ring light facing you
+
+### Setup
+- **Background:** Clean, professional (office, bookshelf, plain wall)
+- **Framing:** Head and shoulders visible, eye level
+- **Distance:** Arm's length away from camera
+- **Eye Contact:** Look at the camera lens, not the screen
+
+### Recording
+- **Practice:** Do a few takes to get comfortable
+- **Energy:** Smile, be enthusiastic, show personality
+- **Pace:** Speak clearly and not too fast
+- **Professional:** Dress professionally, as for an interview
+
+## Editing
+
+Use free tools like:
+- **iMovie** (Mac)
+- **Windows Video Editor** (Windows)
+- **DaVinci Resolve** (Free, cross-platform)
+- **Clipchamp** (Online)
+
+Edit to:
+- Trim to exactly 30 seconds
+- Add your name as text (optional)
+- Adjust brightness/contrast if needed
+- Export as MP4
+
+## Script Template
+
+"Hi, I'm [Your Name]. I'm a [your role/passion] focused on [what you do]. 
+I specialize in [your expertise] and I'm passionate about [your interests]. 
+
+Outside of work, I love [hobby 1], [hobby 2], and [hobby 3]. 
+
+I'm excited about [your goals/future plans]. Let's connect and create 
+something amazing together!"
+
+## No Video Yet?
+
+The website will display a placeholder if the video file is not found. You can:
+1. Add the video later
+2. Start with a placeholder
+3. Record on your phone today (it's easier than you think!)
+
+## Need Help?
+
+Recording yourself can feel awkward at first. Tips:
+- Pretend you're talking to a friend
+- Focus on being authentic, not perfect
+- Your personality matters more than production quality
+- Practice your script 2-3 times before recording
+- Do 3-5 takes and pick the best one
+
+You've got this! 🎥

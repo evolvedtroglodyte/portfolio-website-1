@@ -1,0 +1,35 @@
+How to Add Video Thumbnail (Screenshot from your video)
+========================================================
+
+OPTION 1: Use VLC Media Player (Recommended - Free & Easy)
+-----------------------------------------------------------
+1. Open your video (about-me.mp4) in VLC Media Player
+2. Pause the video at the beginning showing your face
+3. Go to Video menu → Take Snapshot
+4. VLC will save the screenshot to your Pictures folder
+5. Rename the screenshot to "video-thumbnail.jpg"
+6. Move it to the images/ folder
+7. Done! The video will now show your face as the thumbnail
+
+OPTION 2: Use QuickTime (Mac)
+------------------------------
+1. Open about-me.mp4 in QuickTime Player
+2. Pause at the frame showing your face
+3. Press Command + Shift + 4 (screenshot tool)
+4. Take a screenshot of the video frame
+5. Save as "video-thumbnail.jpg" in the images/ folder
+
+OPTION 3: Use Photos/Preview app (Mac)
+---------------------------------------
+1. Import your video to Photos app
+2. Find the frame with your face
+3. Export that frame as an image
+4. Save as "video-thumbnail.jpg" in the images/ folder
+
+The HTML is already set to use "images/profile.jpg" as the thumbnail,
+so you can either:
+- Use your profile photo (already set up), or
+- Take a screenshot from the video and replace profile.jpg
+
+Current setup: The video uses your profile.jpg as the poster image,
+which looks professional and consistent with your profile photo above!

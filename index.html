@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vishnu Anapalli - Professional Portfolio showcasing experience, skills, and projects">
+    <title>Vishnu Anapalli | Professional Portfolio</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/logo.jpg" alt="Logo" class="nav-logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#goals" class="nav-link">Goals</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="greeting">Hello, I'm</span>
+                    <span class="name">Vishnu Anapalli</span>
+                </h1>
+                <p class="hero-subtitle">Innovator | AI Enthusiast | Future Tech Leader</p>
+                <div class="hero-cta">
+                    <a href="#about" class="btn btn-primary">Explore My Work</a>
+                    <a href="https://www.linkedin.com/in/vishnu-anapalli/" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-linkedin"></i> LinkedIn Profile
+                    </a>
+                </div>
+
+                <!-- AI Chatbot CTA -->
+                <div class="chatbot-cta">
+                    <button id="chatbot-trigger" class="chatbot-trigger-btn">
+                        <i class="fas fa-comments"></i>
+                        <span>Ask Vishnu</span>
+                    </button>
+                    <p class="chatbot-description">Ask me anything about my professional background<br>😊</p>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-circle">
+                    <!-- Profile photo placeholder - replace with actual image -->
+                    <img src="images/profile.jpg" alt="Vishnu Anapalli" id="profile-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-paragraph">
+                        I am a passionate innovator dedicated to leveraging cutting-edge technology to drive business transformation. With a strong foundation in AI, data analytics, and cloud technologies, I focus on harnessing the power of artificial intelligence to solve complex problems and create innovative solutions. My journey has been shaped by a commitment to continuous learning, building impactful projects, and making meaningful connections in the tech industry.
+                    </p>
+                    <p class="about-paragraph">
+                        Beyond my professional pursuits, I'm an avid sports enthusiast who enjoys playing basketball and golf. I have an adventurous spirit with a personal goal to visit every national park in the United States and Canada. I believe in maintaining a balanced life by spending quality time with friends, giving back through philanthropy, and exploring new experiences that broaden my perspective.
+                    </p>
+                </div>
+                <div class="about-video">
+                    <h3 class="video-title">Tell Me About Yourself</h3>
+                    <div class="video-container">
+                        <!-- Video with poster thumbnail - upload video-thumbnail.jpg to images folder -->
+                        <video controls poster="images/video-thumbnail.jpg">
+                            <source src="videos/about-me.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Goals Section -->
+    <section id="goals" class="goals-section">
+        <div class="container">
+            <h2 class="section-title">Professional Goals</h2>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Driven Transformation</h3>
+                    <p>
+                        Master artificial intelligence technologies and apply them to transform
+                        businesses, streamline operations, and create innovative solutions that
+                        drive measurable impact.
+                    </p>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Entrepreneurship</h3>
+                    <p>
+                        Build and scale my own business venture, combining technical expertise
+                        with strategic vision to create products that solve real-world problems
+                        and deliver value to customers.
+                    </p>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Continuous Innovation</h3>
+                    <p>
+                        Stay at the forefront of technological advancement, constantly learning
+                        new skills and methodologies to remain competitive in an ever-evolving
+                        digital landscape.
+                    </p>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Leadership & Impact</h3>
+                    <p>
+                        Develop leadership capabilities to inspire teams, mentor others, and
+                        contribute to building a culture of innovation and excellence in
+                        technology organizations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Highlights Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title">Resume Highlights</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">AI-Powered Market Sentiment Agent</h3>
+                        <span class="timeline-date">Personal Project | Jun 2025 - Aug 2025</span>
+                        <p class="timeline-description">
+                            Developed a real-time market sentiment tracker using n8n, Azure AI, MySQL, and Power BI. Built an automated system to ingest news and Reddit mentions for stock tickers, integrated Azure AI for sentiment scoring, and created a dynamic Power BI dashboard to visualize sentiment trends and enable rapid market mood detection.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Brand Sales & Marketing Specialist</h3>
+                        <span class="timeline-date">BA Group Intern | Jun 2025 - Aug 2025</span>
+                        <p class="timeline-description">
+                            Co-created AI and cloud-based solutions through consultative sales and cross-functional collaboration. Led company marketing efforts across all social media channels and website content. Created targeted email campaigns that increased open rates by 25% and collaborated with analytics team using SQL queries to refine customer segmentation.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Sales & HR Operations Representative</h3>
+                        <span class="timeline-date">Aqua-Tots Swim School | May 2024 - Dec 2024</span>
+                        <p class="timeline-description">
+                            Drove a 15% increase in seasonal sales through proactive customer engagement and leveraging CRM tools and advanced Excel functions to track leads and sales. Collaborated with cross-functional teams to deliver tailored marketing solutions aligned with business goals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills-section">
+                <h3 class="skills-title">Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">SQL</div>
+                    <div class="skill-tag">R</div>
+                    <div class="skill-tag">Java</div>
+                    <div class="skill-tag">C++</div>
+                    <div class="skill-tag">Power BI</div>
+                    <div class="skill-tag">Tableau</div>
+                    <div class="skill-tag">Azure AI</div>
+                    <div class="skill-tag">Excel (Advanced)</div>
+                    <div class="skill-tag">MySQL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">My Journey</h2>
+            <p class="section-subtitle">Moments from my professional and personal adventures</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/gallery-1.jpg" alt="Gallery image 1" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-2.jpg" alt="Gallery image 2" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-3.jpg" alt="Gallery image 3" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-4.jpg" alt="Gallery image 4" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-5.jpg" alt="Gallery image 5" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-6.jpg" alt="Gallery image 6" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section class="fun-facts-section">
+        <div class="container">
+            <h2 class="section-title">Fun Facts</h2>
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <i class="fas fa-basketball-ball fact-icon"></i>
+                    <h3>Basketball Enthusiast</h3>
+                    <p>Love playing basketball and staying active on the court</p>
+                </div>
+                <div class="fact-card">
+                    <i class="fas fa-golf-ball fact-icon"></i>
+                    <h3>Golf Player</h3>
+                    <p>Enjoy the strategic challenge and relaxation of golf</p>
+                </div>
+                <div class="fact-card">
+                    <i class="fas fa-mountain fact-icon"></i>
+                    <h3>National Parks Explorer</h3>
+                    <p>On a mission to visit every national park in the US & Canada</p>
+                </div>
+                <div class="fact-card">
+                    <i class="fas fa-users fact-icon"></i>
+                    <h3>Social Connector</h3>
+                    <p>Value quality time with friends and building meaningful relationships</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <p class="contact-text">
+                    I'm always interested in new opportunities, collaborations, and conversations.
+                    Feel free to reach out through LinkedIn or ask me any question using the chatbot below!
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/vishnu-anapalli/" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                        <span>Connect on LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Vishnu Anapalli. All rights reserved.</p>
+            <p>Built with passion and innovation</p>
+        </div>
+    </footer>
+
+    <!-- AI Chatbot Modal -->
+    <div class="chatbot-modal" id="chatbot-modal">
+        <div class="chatbot-modal-content">
+            <div class="chatbot-header">
+                <h3>Ask Vishnu</h3>
+                <button class="chatbot-close" id="chatbot-close" aria-label="Close chatbot">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hi! I'm an AI assistant here to answer questions about Vishnu's professional background, education, skills, and experience. Ask me anything!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input-area">
+                <div class="typing-indicator" id="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <form class="chatbot-form" id="chatbot-form">
+                    <input
+                        type="text"
+                        class="chatbot-input"
+                        id="chatbot-input"
+                        placeholder="Type your question here..."
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="chatbot-send" aria-label="Send message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

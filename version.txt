@@ -1,0 +1,3 @@
+Version 2.0 - Chatbot Fixed
+Deployed: November 17, 2025
+Changes: Added Netlify Function for chatbot backend
