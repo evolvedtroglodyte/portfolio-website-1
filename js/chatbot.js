@@ -131,25 +131,39 @@ document.addEventListener('DOMContentLoaded', function() {
             let extractedMessage = null;
 
             // Check standard fields first (data.message, data.output, data.response)
-            if ('message' in data && data.message !== null && data.message !== undefined) {
+            if ('message' in data && typeof data.message === 'string') {
                 extractedMessage = data.message;
                 console.log('✓ Found data.message:', extractedMessage);
-            } else if ('output' in data && data.output !== null && data.output !== undefined) {
+            } else if ('output' in data && typeof data.output === 'string') {
                 extractedMessage = data.output;
                 console.log('✓ Found data.output:', extractedMessage);
-            } else if ('response' in data && data.response !== null && data.response !== undefined) {
+            } else if ('response' in data && typeof data.response === 'string') {
                 extractedMessage = data.response;
                 console.log('✓ Found data.response:', extractedMessage);
             } else {
-                // Handle n8n's nested structure: { "\"message\"": { "\"text...\"": { "output": "text..." } } }
+                // Handle n8n's nested structure - recursively search for "output" field
                 console.log('Checking nested structure...');
-                const firstValue = Object.values(data)[0];
-                if (firstValue && typeof firstValue === 'object') {
-                    const nestedValue = Object.values(firstValue)[0];
-                    if (nestedValue && nestedValue.output) {
-                        extractedMessage = nestedValue.output;
-                        console.log('✓ Found nested output:', extractedMessage);
+
+                function findOutput(obj, depth = 0) {
+                    if (depth > 5) return null; // Prevent infinite recursion
+
+                    if (obj && typeof obj === 'object') {
+                        // Check if this object has an output field
+                        if ('output' in obj && typeof obj.output === 'string') {
+                            return obj.output;
+                        }
+                        // Recursively search all values
+                        for (const value of Object.values(obj)) {
+                            const result = findOutput(value, depth + 1);
+                            if (result) return result;
+                        }
                     }
+                    return null;
+                }
+
+                extractedMessage = findOutput(data);
+                if (extractedMessage) {
+                    console.log('✓ Found nested output:', extractedMessage);
                 }
             }
 
