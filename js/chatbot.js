@@ -119,8 +119,23 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             const data = await response.json();
-            console.log('Response from n8n:', data);
-            return data.message;
+            console.log('Full response object:', data);
+            console.log('All keys:', Object.keys(data));
+
+            // Check all possible response fields
+            if (data.message) {
+                console.log('Using data.message:', data.message);
+                return data.message;
+            } else if (data.output) {
+                console.log('Using data.output:', data.output);
+                return data.output;
+            } else if (data.response) {
+                console.log('Using data.response:', data.response);
+                return data.response;
+            } else {
+                console.error('Could not find message in response. Full data:', JSON.stringify(data));
+                return 'Error: Invalid response format from server';
+            }
         } catch (error) {
             console.error('Chatbot error details:', error);
             throw error;
