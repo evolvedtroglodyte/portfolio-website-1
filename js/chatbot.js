@@ -148,9 +148,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (depth > 5) return null; // Prevent infinite recursion
 
                     if (obj && typeof obj === 'object') {
-                        // Check if this object has an output field
+                        // Check for output field (case-insensitive)
                         if ('output' in obj && typeof obj.output === 'string') {
                             return obj.output;
+                        }
+                        if ('Output' in obj && typeof obj.Output === 'string') {
+                            return obj.Output;
                         }
                         // Recursively search all values
                         for (const value of Object.values(obj)) {
