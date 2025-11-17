@@ -119,22 +119,33 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             const data = await response.json();
-            console.log('Full response object:', data);
-            console.log('All keys:', Object.keys(data));
 
-            // Check all possible response fields
-            if (data.message) {
-                console.log('Using data.message:', data.message);
+            // Enhanced debugging - log the full response structure
+            console.log('=== RESPONSE DEBUGGING ===');
+            console.log('Full response object:', data);
+            console.log('Response type:', typeof data);
+            console.log('All keys:', Object.keys(data));
+            console.log('data.message exists?', 'message' in data);
+            console.log('data.message value:', data.message);
+            console.log('========================');
+
+            // Check all possible response fields - use 'in' operator instead of truthy check
+            // This ensures we catch the field even if it's an empty string
+            if ('message' in data && data.message !== null && data.message !== undefined) {
+                console.log('✓ Using data.message:', data.message);
                 return data.message;
-            } else if (data.output) {
-                console.log('Using data.output:', data.output);
+            } else if ('output' in data && data.output !== null && data.output !== undefined) {
+                console.log('✓ Using data.output:', data.output);
                 return data.output;
-            } else if (data.response) {
-                console.log('Using data.response:', data.response);
+            } else if ('response' in data && data.response !== null && data.response !== undefined) {
+                console.log('✓ Using data.response:', data.response);
                 return data.response;
             } else {
-                console.error('Could not find message in response. Full data:', JSON.stringify(data));
-                return 'Error: Invalid response format from server';
+                // Improved error message with full structure
+                console.error('✗ Could not find message in response.');
+                console.error('Expected format: { "message": "text" }');
+                console.error('Received:', JSON.stringify(data, null, 2));
+                return 'Error: Invalid response format from server. Please check the console for details.';
             }
         } catch (error) {
             console.error('Chatbot error details:', error);
