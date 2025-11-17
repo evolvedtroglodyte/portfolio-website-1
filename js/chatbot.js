@@ -125,25 +125,39 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Full response object:', data);
             console.log('Response type:', typeof data);
             console.log('All keys:', Object.keys(data));
-            console.log('data.message exists?', 'message' in data);
-            console.log('data.message value:', data.message);
             console.log('========================');
 
-            // Check all possible response fields - use 'in' operator instead of truthy check
-            // This ensures we catch the field even if it's an empty string
+            // Try to extract message from various possible structures
+            let extractedMessage = null;
+
+            // Check standard fields first (data.message, data.output, data.response)
             if ('message' in data && data.message !== null && data.message !== undefined) {
-                console.log('✓ Using data.message:', data.message);
-                return data.message;
+                extractedMessage = data.message;
+                console.log('✓ Found data.message:', extractedMessage);
             } else if ('output' in data && data.output !== null && data.output !== undefined) {
-                console.log('✓ Using data.output:', data.output);
-                return data.output;
+                extractedMessage = data.output;
+                console.log('✓ Found data.output:', extractedMessage);
             } else if ('response' in data && data.response !== null && data.response !== undefined) {
-                console.log('✓ Using data.response:', data.response);
-                return data.response;
+                extractedMessage = data.response;
+                console.log('✓ Found data.response:', extractedMessage);
             } else {
-                // Improved error message with full structure
+                // Handle n8n's nested structure: { "\"message\"": { "\"text...\"": { "output": "text..." } } }
+                console.log('Checking nested structure...');
+                const firstValue = Object.values(data)[0];
+                if (firstValue && typeof firstValue === 'object') {
+                    const nestedValue = Object.values(firstValue)[0];
+                    if (nestedValue && nestedValue.output) {
+                        extractedMessage = nestedValue.output;
+                        console.log('✓ Found nested output:', extractedMessage);
+                    }
+                }
+            }
+
+            if (extractedMessage) {
+                return extractedMessage;
+            } else {
                 console.error('✗ Could not find message in response.');
-                console.error('Expected format: { "message": "text" }');
+                console.error('Expected format: { "message": "text" } or nested n8n format');
                 console.error('Received:', JSON.stringify(data, null, 2));
                 return 'Error: Invalid response format from server. Please check the console for details.';
             }
