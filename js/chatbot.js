@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Checking nested structure...');
 
                 function findOutput(obj, depth = 0) {
-                    if (depth > 5) return null; // Prevent infinite recursion
+                    if (depth > 10) return null; // Prevent infinite recursion
 
                     if (obj && typeof obj === 'object') {
                         // Check for output field (case-insensitive)
@@ -160,6 +160,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             const result = findOutput(value, depth + 1);
                             if (result) return result;
                         }
+                    } else if (typeof obj === 'string' && obj.length > 20) {
+                        // If we find a long string, it's likely the response
+                        return obj;
                     }
                     return null;
                 }
