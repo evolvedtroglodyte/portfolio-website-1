@@ -119,7 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             const data = await response.json();
-            return data.response;
+            console.log('Response from n8n:', data); // Debug log
+            return data.message;
         } catch (error) {
             console.error('Chatbot error details:', error);
             throw error;
