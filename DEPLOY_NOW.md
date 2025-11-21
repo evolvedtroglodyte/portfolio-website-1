@@ -18,7 +18,7 @@ The chatbot is showing "Sorry, I encountered an error" because you're testing th
 6. Click the **"Add a variable"** button (or "Add environment variables")
 7. In the form that appears:
    - **Key**: Type exactly: `ANTHROPIC_API_KEY`
-   - **Value**: Copy and paste this: `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`
+   - **Value**: `[Your Anthropic API key - already set up in Netlify]`
    - **Scopes**: Leave as default (All scopes)
 8. Click **"Create variable"** or **"Save"**
 
