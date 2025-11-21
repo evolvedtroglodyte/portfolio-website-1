@@ -1,4 +1,4 @@
-const Anthropic = require('@anthropic-ai/sdk');
+const OpenAI = require('openai');
 
 // System prompt with information about Vishnu
 const SYSTEM_PROMPT = `You are an AI assistant representing Vishnu Anapalli. Your role is to answer questions about Vishnu's professional background, education, skills, and experience in a friendly, professional, and informative manner.
@@ -137,9 +137,9 @@ exports.handler = async (event, context) => {
             };
         }
 
-        // Initialize Anthropic client
-        const anthropic = new Anthropic({
-            apiKey: process.env.ANTHROPIC_API_KEY
+        // Initialize OpenAI client
+        const openai = new OpenAI({
+            apiKey: process.env.OPENAI_API_KEY
         });
 
         // Get or create conversation history
@@ -151,16 +151,18 @@ exports.handler = async (event, context) => {
             content: message
         });
 
-        // Call Claude API
-        const response = await anthropic.messages.create({
-            model: 'claude-3-haiku-20240307',
+        // Call OpenAI API
+        const response = await openai.chat.completions.create({
+            model: 'gpt-4o-mini',
             max_tokens: 1024,
-            system: SYSTEM_PROMPT,
-            messages: conversationHistory
+            messages: [
+                { role: 'system', content: SYSTEM_PROMPT },
+                ...conversationHistory
+            ]
         });
 
         // Extract assistant's response
-        const assistantMessage = response.content[0].text;
+        const assistantMessage = response.choices[0].message.content;
 
         // Add assistant response to history
         conversationHistory.push({
